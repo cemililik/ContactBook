@@ -40,10 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ContactBook.DatabaseLogicLayer\ContactBook.DatabaseLogicLayer.csproj">
+      <Project>{c407cde1-c9ed-4be2-9bde-938b0d806eea}</Project>
+      <Name>ContactBook.DatabaseLogicLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj">
       <Project>{2b6f8121-0c20-4feb-b9de-7be5c8133133}</Project>
       <Name>ContactBook.Entities</Name>
