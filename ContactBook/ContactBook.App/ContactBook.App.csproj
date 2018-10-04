@@ -51,8 +51,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -76,10 +86,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ContactBook.BusinessLogicLayer\ContactBook.BusinessLogicLayer.csproj">
+      <Project>{2fe25d6f-ccb2-4db1-9474-f0d1cdbdafae}</Project>
+      <Name>ContactBook.BusinessLogicLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ContactBook.Entities\ContactBook.Entities.csproj">
       <Project>{2b6f8121-0c20-4feb-b9de-7be5c8133133}</Project>
       <Name>ContactBook.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

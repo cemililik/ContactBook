@@ -19,7 +19,7 @@ namespace ContactBook.DatabaseLogicLayer
 
         public DLL()
         {
-            con = new SqlConnection("server=localhost; Authentication=Windows Authentication; Database=ContactBook ");
+            con = new SqlConnection("Data Source=DESKTOP-04SEUSQ;Initial Catalog=ContactBook;Integrated Security=True");
         }
         public void SetConnection()
         {
@@ -35,7 +35,7 @@ namespace ContactBook.DatabaseLogicLayer
         {
             try
             {
-                cmd = new SqlCommand("select count(*) from users where userName=@userName and pass=@pass", con);
+                cmd = new SqlCommand("select count(*) from users where userName = @userName and pass = @pass", con);
                 cmd.Parameters.Add("@userName", SqlDbType.NVarChar).Value = u.userName;
                 cmd.Parameters.Add("@pass", SqlDbType.NVarChar).Value = u.pass;
                 SetConnection();
@@ -86,7 +86,17 @@ namespace ContactBook.DatabaseLogicLayer
         {
             try
             {
-                cmd = new SqlCommand(@"update contacts cName = @cName,cSurname = @cSurname, numberI = @numberI, numberII = @numberII, numberIII = @numberIII, emailAdress = @emailAdress, webAdress = @webAdress, adress = @adress, info = @info where id= @id", con);
+                cmd = new SqlCommand(@"update contacts 
+cName = @cName,
+cSurname = @cSurname,
+numberI = @numberI,
+numberII = @numberII,
+numberIII = @numberIII,
+emailAdress = @emailAdress,
+webAdress = @webAdress,
+adress = @adress,
+info = @info
+where id= @id", con);
                 cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = c.id;
                 cmd.Parameters.Add("@cName", SqlDbType.NVarChar).Value = c.cName;
                 cmd.Parameters.Add("@cSurname", SqlDbType.NVarChar).Value = c.cSurname;
@@ -115,7 +125,8 @@ namespace ContactBook.DatabaseLogicLayer
         {
             try
             {
-                cmd = new SqlCommand(@"delete contacts where id = @id", con);
+                cmd = new SqlCommand(@"delete contacts 
+where id = @id", con);
                 cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = id;
                 SetConnection();
                 ReturnValues = cmd.ExecuteNonQuery();
