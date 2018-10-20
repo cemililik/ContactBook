@@ -16,5 +16,20 @@ namespace ContactBook.App
         {
             InitializeComponent();
         }
+
+        private void btn_add_contact_Click(object sender, EventArgs e)
+        {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            int ReturnValues = BLL.addRecord(txt_new_name.Text, txt_new_surname.Text, txt_new_number1.Text, txt_new_number2.Text, txt_new_number3.Text, txt_new_email.Text, txt_new_webadress.Text, txt_new_adress.Text, txt_new_info.Text);
+            if(ReturnValues>0)
+            {
+                MessageBox.Show("Successful!! New Record Added","Info",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Bu işte bir iş var", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
+ 
