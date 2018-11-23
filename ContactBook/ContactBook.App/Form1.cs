@@ -32,6 +32,7 @@ namespace ContactBook.App
             {
                 MainPage main = new MainPage();
                 main.Show();
+                this.Hide();
             }
             else
             {

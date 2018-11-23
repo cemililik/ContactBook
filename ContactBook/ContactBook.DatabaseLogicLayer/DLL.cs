@@ -87,7 +87,8 @@ namespace ContactBook.DatabaseLogicLayer
         {
             try
             {
-                cmd = new SqlCommand(@"update contacts 
+                cmd = new SqlCommand(@"update contacts
+Set
 cName = @cName,
 cSurname = @cSurname,
 numberI = @numberI,
@@ -97,8 +98,10 @@ emailAdress = @emailAdress,
 webAdress = @webAdress,
 adress = @adress,
 info = @info
-where id= @id", con);
-                cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = c.id;
+where 
+id= @id
+", con);
+                cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = c.id;
                 cmd.Parameters.Add("@cName", SqlDbType.NVarChar).Value = c.cName;
                 cmd.Parameters.Add("@cSurname", SqlDbType.NVarChar).Value = c.cSurname;
                 cmd.Parameters.Add("@numberI", SqlDbType.NVarChar).Value = c.numberI;
@@ -128,7 +131,7 @@ where id= @id", con);
             {
                 cmd = new SqlCommand(@"delete contacts 
 where id = @id", con);
-                cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = id;
+                cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = id;
                 SetConnection();
                 ReturnValues = cmd.ExecuteNonQuery();
 

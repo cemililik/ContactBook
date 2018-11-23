@@ -52,17 +52,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.txt_update_email = new System.Windows.Forms.TextBox();
+            this.txt_update_surname = new System.Windows.Forms.TextBox();
+            this.txt_update_number3 = new System.Windows.Forms.TextBox();
+            this.txt_update_number2 = new System.Windows.Forms.TextBox();
+            this.txt_update_adress = new System.Windows.Forms.TextBox();
+            this.txt_update_info = new System.Windows.Forms.TextBox();
+            this.txt_update_webadress = new System.Windows.Forms.TextBox();
+            this.txt_update_number1 = new System.Windows.Forms.TextBox();
+            this.txt_update_name = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -94,6 +94,7 @@
             this.lst_list.Name = "lst_list";
             this.lst_list.Size = new System.Drawing.Size(253, 485);
             this.lst_list.TabIndex = 0;
+            this.lst_list.DoubleClick += new System.EventHandler(this.lst_list_DoubleClick);
             // 
             // groupBox2
             // 
@@ -292,17 +293,17 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.textBox10);
-            this.groupBox3.Controls.Add(this.textBox11);
-            this.groupBox3.Controls.Add(this.textBox12);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.textBox15);
-            this.groupBox3.Controls.Add(this.txt);
+            this.groupBox3.Controls.Add(this.btn_delete);
+            this.groupBox3.Controls.Add(this.btn_update);
+            this.groupBox3.Controls.Add(this.txt_update_email);
+            this.groupBox3.Controls.Add(this.txt_update_surname);
+            this.groupBox3.Controls.Add(this.txt_update_number3);
+            this.groupBox3.Controls.Add(this.txt_update_number2);
+            this.groupBox3.Controls.Add(this.txt_update_adress);
+            this.groupBox3.Controls.Add(this.txt_update_info);
+            this.groupBox3.Controls.Add(this.txt_update_webadress);
+            this.groupBox3.Controls.Add(this.txt_update_number1);
+            this.groupBox3.Controls.Add(this.txt_update_name);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
@@ -319,88 +320,90 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Update/DeleteContact";
             // 
-            // button3
+            // btn_delete
             // 
-            this.button3.Location = new System.Drawing.Point(410, 196);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(345, 34);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Delete Contact";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_delete.Location = new System.Drawing.Point(410, 196);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(345, 34);
+            this.btn_delete.TabIndex = 20;
+            this.btn_delete.Text = "Delete Contact";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
-            // button2
+            // btn_update
             // 
-            this.button2.Location = new System.Drawing.Point(9, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(345, 34);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Update Contact";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_update.Location = new System.Drawing.Point(9, 196);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(345, 34);
+            this.btn_update.TabIndex = 19;
+            this.btn_update.Text = "Update Contact";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
-            // textBox9
+            // txt_update_email
             // 
-            this.textBox9.Location = new System.Drawing.Point(82, 97);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(147, 20);
-            this.textBox9.TabIndex = 12;
+            this.txt_update_email.Location = new System.Drawing.Point(82, 97);
+            this.txt_update_email.Name = "txt_update_email";
+            this.txt_update_email.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_email.TabIndex = 12;
             // 
-            // textBox10
+            // txt_update_surname
             // 
-            this.textBox10.Location = new System.Drawing.Point(82, 64);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(147, 20);
-            this.textBox10.TabIndex = 11;
+            this.txt_update_surname.Location = new System.Drawing.Point(82, 64);
+            this.txt_update_surname.Name = "txt_update_surname";
+            this.txt_update_surname.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_surname.TabIndex = 11;
             // 
-            // textBox11
+            // txt_update_number3
             // 
-            this.textBox11.Location = new System.Drawing.Point(341, 97);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(147, 20);
-            this.textBox11.TabIndex = 15;
+            this.txt_update_number3.Location = new System.Drawing.Point(341, 97);
+            this.txt_update_number3.Name = "txt_update_number3";
+            this.txt_update_number3.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_number3.TabIndex = 15;
             // 
-            // textBox12
+            // txt_update_number2
             // 
-            this.textBox12.Location = new System.Drawing.Point(341, 64);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(147, 20);
-            this.textBox12.TabIndex = 14;
+            this.txt_update_number2.Location = new System.Drawing.Point(341, 64);
+            this.txt_update_number2.Name = "txt_update_number2";
+            this.txt_update_number2.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_number2.TabIndex = 14;
             // 
-            // textBox18
+            // txt_update_adress
             // 
-            this.textBox18.Location = new System.Drawing.Point(608, 64);
-            this.textBox18.Multiline = true;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(147, 53);
-            this.textBox18.TabIndex = 17;
+            this.txt_update_adress.Location = new System.Drawing.Point(608, 64);
+            this.txt_update_adress.Multiline = true;
+            this.txt_update_adress.Name = "txt_update_adress";
+            this.txt_update_adress.Size = new System.Drawing.Size(147, 53);
+            this.txt_update_adress.TabIndex = 17;
             // 
-            // textBox13
+            // txt_update_info
             // 
-            this.textBox13.Location = new System.Drawing.Point(82, 137);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(673, 53);
-            this.textBox13.TabIndex = 18;
+            this.txt_update_info.Location = new System.Drawing.Point(82, 137);
+            this.txt_update_info.Multiline = true;
+            this.txt_update_info.Name = "txt_update_info";
+            this.txt_update_info.Size = new System.Drawing.Size(673, 53);
+            this.txt_update_info.TabIndex = 18;
             // 
-            // textBox14
+            // txt_update_webadress
             // 
-            this.textBox14.Location = new System.Drawing.Point(608, 34);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(147, 20);
-            this.textBox14.TabIndex = 16;
+            this.txt_update_webadress.Location = new System.Drawing.Point(608, 34);
+            this.txt_update_webadress.Name = "txt_update_webadress";
+            this.txt_update_webadress.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_webadress.TabIndex = 16;
             // 
-            // textBox15
+            // txt_update_number1
             // 
-            this.textBox15.Location = new System.Drawing.Point(341, 34);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(147, 20);
-            this.textBox15.TabIndex = 13;
+            this.txt_update_number1.Location = new System.Drawing.Point(341, 34);
+            this.txt_update_number1.Name = "txt_update_number1";
+            this.txt_update_number1.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_number1.TabIndex = 13;
             // 
-            // txt
+            // txt_update_name
             // 
-            this.txt.Location = new System.Drawing.Point(82, 34);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(147, 20);
-            this.txt.TabIndex = 10;
+            this.txt_update_name.Location = new System.Drawing.Point(82, 34);
+            this.txt_update_name.Name = "txt_update_name";
+            this.txt_update_name.Size = new System.Drawing.Size(147, 20);
+            this.txt_update_name.TabIndex = 10;
             // 
             // label9
             // 
@@ -494,6 +497,7 @@
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainPage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainPage_FormClosed);
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -529,17 +533,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.TextBox txt_update_email;
+        private System.Windows.Forms.TextBox txt_update_surname;
+        private System.Windows.Forms.TextBox txt_update_number3;
+        private System.Windows.Forms.TextBox txt_update_number2;
+        private System.Windows.Forms.TextBox txt_update_adress;
+        private System.Windows.Forms.TextBox txt_update_info;
+        private System.Windows.Forms.TextBox txt_update_webadress;
+        private System.Windows.Forms.TextBox txt_update_number1;
+        private System.Windows.Forms.TextBox txt_update_name;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
