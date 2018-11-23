@@ -57,7 +57,8 @@ namespace ContactBook.DatabaseLogicLayer
         {
             try
             {
-                cmd = new SqlCommand("insert into contacts (ID,cName,cSurname,numberI,numberII,numberIII,emailAdress,webAdress,adress,info) values (@ID,@cName,@cSurname,@numberI,@numberII,@numberIII,@emailAdress,@webAdress,@adress,@info)", con);
+                //SetConnection();
+                cmd = new SqlCommand("insert into contacts (id,cName,cSurname,numberI,numberII,numberIII,emailAdress,webAdress,adress,info) values (@ID,@cName,@cSurname,@numberI,@numberII,@numberIII,@emailAdress,@webAdress,@adress,@info)", con);
                 cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = c.id;
                 cmd.Parameters.Add("@cName", SqlDbType.NVarChar).Value = c.cName;
                 cmd.Parameters.Add("@cSurname", SqlDbType.NVarChar).Value = c.cSurname;

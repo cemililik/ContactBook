@@ -18,5 +18,10 @@ namespace ContactBook.Entities
         public string webAdress { get; set; }
         public string adress { get; set; }
         public string info { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0},{1}",cName,cSurname);
+        }
     }
 }

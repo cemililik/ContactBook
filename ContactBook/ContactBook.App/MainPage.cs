@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ContactBook.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,36 @@ namespace ContactBook.App
                 MessageBox.Show("Bu işte bir iş var", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_new_name.Text = "";
+            txt_new_surname.Text = "";
+            txt_new_number1.Text = "";
+            txt_new_number2.Text = "";
+            txt_new_number3.Text = "";
+            txt_new_email.Text = "";
+            txt_new_webadress.Text = "";
+            txt_new_adress.Text = "";
+            txt_new_info.Text = "";
+        }
+
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+            addList();
+        }
+
+        private void addList()
+        {
+            BusinessLogicLayer.BLL BLL = new BusinessLogicLayer.BLL();
+            List<contacts> ContactList = BLL.listContact();
+
+            if(ContactList != null && ContactList.Count>0)
+            {
+                lst_list.DataSource = ContactList;
+            }
+        }
+
     }
 }
  

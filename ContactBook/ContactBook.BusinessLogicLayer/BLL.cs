@@ -37,7 +37,7 @@ namespace ContactBook.BusinessLogicLayer
         {
             if (!string.IsNullOrEmpty(cName) && !string.IsNullOrEmpty(cSurname) && !string.IsNullOrEmpty(numberI))
             {
-                return dll.addContact(new Entities.contacts()
+                    return dll.addContact(new Entities.contacts()
                 {
                     id = Guid.NewGuid(),
                     cName = cName,
