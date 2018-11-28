@@ -119,6 +119,11 @@ namespace ContactBook.App
         {
             Application.Exit();
         }
+
+        private void lst_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  

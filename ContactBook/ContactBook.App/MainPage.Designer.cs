@@ -94,6 +94,7 @@
             this.lst_list.Name = "lst_list";
             this.lst_list.Size = new System.Drawing.Size(253, 485);
             this.lst_list.TabIndex = 0;
+            this.lst_list.SelectedIndexChanged += new System.EventHandler(this.lst_list_SelectedIndexChanged);
             this.lst_list.DoubleClick += new System.EventHandler(this.lst_list_DoubleClick);
             // 
             // groupBox2
